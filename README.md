@@ -98,6 +98,162 @@ Please submit a pull request if there is any material that you think should be i
 - [Books propose](https://cakebytheoceanluo.github.io/2020/03/10/books/)
 - [what is database and its types](https://www.scaler.com/topics/dbms/what-is-database/)
 
+## Storage
+
+### NoSQL Systems
+
+Papers:
+
+- 2006, [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf), OSDI
+- 2007, [Dynamo: Amazon’s Highly Available Key-value Store](https://sites.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf), SOSP
+- 2008, [PNUTS: Yahoo!’s Hosted Data Serving Platform](https://sites.cs.ucsb.edu/~agrawal/fall2009/PNUTS.pdf), VLDB
+- 2010, [Cassandra - A Decentralized Structured Storage System](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf), SOSP
+- 2019, [PNUTS to Sherpa: Lessons from Yahoo!’s Cloud Database ](http://www.vldb.org/pvldb/vol12/p2300-cooper.pdf), VLDB
+
+### Buffer Management
+
+Courses:
+
+- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [Buffer Pools](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-11-2019)
+
+Papers:
+
+- 1987, [The 5 Minute Rule for Trading Memory for Disc Accesses and the 5 Byte Rule for Trading Memory for CPU Time](https://www.hpl.hp.com/techreports/tandem/TR-86.1.pdf), SIGMOD
+- 2008, [The Five Minute Rule 20 Years Later and How Flash Memory Changes the Rules](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.227.3846&rep=rep1&type=pdf), ACM Queue
+- 2018, [Managing Non-Volatile Memory in Database Systems](https://db.in.tum.de/people/sites/vanrenen/papers/HyMem.pdf?lang=de), SIGMOD
+- 2018, [LeanStore: In-Memory Data Management Beyond Main Memory](https://db.in.tum.de/~leis/papers/leanstore.pdf), ICDE
+- 2020, [Umbra: A Disk-Based System with In-Memory Performance](http://cidrdb.org/cidr2020/papers/p29-neumann-cidr20.pdf), CIDR
+
+### Disk IO
+
+Blogs:
+
+- [On Disk IO, Part 1: Flavors of IO](https://medium.com/databasss/on-disk-io-part-1-flavours-of-io-8e1ace1de017), thanks to [Alex](https://twitter.com/ifesdjeen)
+- [On Disk IO, Part 2: More Flavours of IO](https://medium.com/databasss/on-disk-io-part-2-more-flavours-of-io-c945db3edb13?), thanks to [Alex](https://twitter.com/ifesdjeen)
+- [On Disk IO, Part 3: LSM Trees](https://medium.com/databasss/on-disk-io-part-3-lsm-trees-8b2da218496f), thanks to [Alex](https://twitter.com/ifesdjeen)
+- [On Disk IO, Part 4: B-Trees and RUM Conjecture](https://medium.com/databasss/on-disk-storage-part-4-b-trees-30791060741), thanks to [Alex](https://twitter.com/ifesdjeen)
+- [On Disk IO, Part 5: Access Patterns in LSM Trees](https://medium.com/databasss/on-disk-io-access-patterns-in-lsm-trees-2ba8dffc05f9), thanks to [Alex](https://twitter.com/ifesdjeen)
+- [Ensuring data reaches disk(LWN)](https://lwn.net/Articles/457667/)
+- [Read, write & space amplification - pick 2](http://smalldatum.blogspot.com/2015/11/read-write-space-amplification-pick-2_23.html), thanks to [Mark Callaghan](https://twitter.com/markcallaghandb)
+
+Papers:
+
+- 2016, [Design Tradeoffs of Data Access Methods](http://scholar.harvard.edu/files/stratos/files/rum-tutorial.pdf?m=1461167186), SIGMOD
+- 2016, [Designing Access Methods: The RUM Conjecture](https://stratos.seas.harvard.edu/files/stratos/files/rum.pdf), EDBT
+
+### B-Tree
+
+Blogs:
+
+[] [B树、B+树索引算法原理（上）](https://www.codedump.info/post/20200609-btree-1/) thanks to [codedump](https://www.codedump.info/)
+[] [B树、B+树索引算法原理（下）](https://www.codedump.info/post/20200615-btree-2/)
+
+Courses:
+
+- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [Trees Indexes I](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-18-2019)
+    - [Trees Indexes II](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-23-2019)
+
+- CMU [Advanced Database Systems (15-721)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [OLTP Indexes (B+Tree Data Structures)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#feb-03-2020)
+
+Papers:
+
+- 1979, [The Ubiquitous B-Tree](http://carlosproal.com/ir/papers/p121-comer.pdf)
+
+### LSM-Tree
+
+Papers:
+
+[] 1996, [The Log-Structured Merge-Tree (LSM-Tree)](https://www.cs.umb.edu/~poneil/lsmtree.pdf),
+[] 2014, [A Comparison of Fractal Trees to Log-Structured Merge (LSM) Trees](http://www.pandademo.com/wp-content/uploads/2017/12/A-Comparison-of-Fractal-Trees-to-Log-Structured-Merge-LSM-Trees.pdf)
+[] 2017, [WiscKey: Separating Keys from Values in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf), TOS
+[] 2019, [LSM-based Storage Techniques: A Survey](https://arxiv.org/pdf/1812.07527.pdf)
+
+## Transaction
+
+### Isolation Levels
+
+Blogs:
+
+- [一致性模型](https://www.jianshu.com/p/3673e612cce2), thanks to [siddontang](https://www.jianshu.com/u/1yJ3ge)
+
+Papers:
+
+- 1995, [A Critique of ANSI SQL Isolation Levels](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf), SIGMOD
+- 2000, [Generalized Isolation Level Definitions](http://pmg.csail.mit.edu/papers/icde00.pdf), Proceedings of 16th International Conference on Data Engineering
+
+### Concurrency Control
+
+Courses:
+
+- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [Concurrency Control Theory](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-23-2019)
+    - [Two-Phase Locking Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-28-2019)
+    - [Timestamp Ordering Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-30-2019)
+    - [Multi-Version Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#nov-04-2019)
+
+- CMU [Advanced Database Systems (15-721)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [Multi-Version Concurrency Control (Design Decisions)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-22-2020)
+    - [Multi-Version Concurrency Control (Protocols)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-27-2020)
+    - [Multi-Version Concurrency Control (Garbage Collection)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-29-2020)
+
+Papers:
+
+- 1976, [The Notions of Consistency and Predicate Locks in a Database System](http://jimgray.azurewebsites.net/papers/on%20the%20notions%20of%20consistency%20and%20predicate%20locks%20in%20a%20database%20system%20cacm.pdf), Communications of the ACM
+- 1981, [Concurrency Control in Distributed Database Systems](https://people.eecs.berkeley.edu/~brewer/cs262/concurrency-distributed-databases.pdf), ACM Computing Surveys
+- 1981, [On Optimistic Methods for Concurrency Control](https://www.eecs.harvard.edu/~htk/publication/1981-tods-kung-robinson.pdf), ACM Transactions on Database Systems
+- 1983, [Multiversion Concurrency Control - Theory and Algorithms](https://sites.fas.harvard.edu/~cs265/papers/bernstein-1983.pdf), ACM Transactions on Database Systems
+- 2012, [Serializable Snapshot Isolation in PostgreSQL](http://www.vldb.org/pvldb/vol4/p783-jung.pdf), VLDB
+- 2012, [Calvin: Fast Distributed Transactions for Partitioned Database Systems](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf), SIGMOD
+- 2014, [MaaT: effective and scalable coordination of distributed transactions in the cloud](http://www.nawab.me/Uploads/MaaT_VLDB2014.pdf), VLDB
+- 2014, [Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores](http://www.vldb.org/pvldb/vol8/p209-yu.pdf), VLDB
+- 2014, [An Evaluation of the Advantages and Disadvantages of Deterministic Database Systems](http://www.vldb.org/pvldb/vol7/p821-ren.pdf), VLDB
+- 2015, [Fast Serializable Multi-Version Concurrency Control for Main-Memory Database Systems](https://db.in.tum.de/~muehlbau/papers/mvcc.pdf), SIGMOD
+- 2017, [An Empirical Evaluation of In-Memory Multi-Version Concurrency Control](http://www.vldb.org/pvldb/vol10/p781-Wu.pdf), VLDB
+- 2017, [An Evaluation of Distributed Concurrency Control](https://www.vldb.org/pvldb/vol10/p553-harding.pdf), VLDB
+- 2019, [Scalable Garbage Collection for In-Memory MVCC Systems](https://db.in.tum.de/~boettcher/p128-boettcher.pdf), VLDB
+
+### Hash Table
+
+Courses:
+
+- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+    - [Hash Tables](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-16-2019)
+
+Blogs:
+
+- [Fibonacci Hashing: The Optimization that the World Forgot (or: a Better Alternative to Integer Modulo)](https://probablydance.com/2018/06/16/fibonacci-hashing-the-optimization-that-the-world-forgot-or-a-better-alternative-to-integer-modulo/), thanks to [Malte Skarupke](https://probablydance.com/)
+- [All hash table sizes you will ever need](https://databasearchitects.blogspot.com/2020/01/all-hash-table-sizes-you-will-ever-need.html), thanks to [Database Architects - Thomas Neumann](https://databasearchitects.blogspot.com/)
+
+### Bloom Filter
+
+Papers:
+- 2018, [SuRF: Practical Range Query Filtering with Fast Succinct Tries](https://www.cs.cmu.edu/~pavlo/papers/mod601-zhangA-hm.pdf), SIGMOD
+
+
+## Replication & Consistency
+
+Blogs:
+
+- [Tick or Tock? Keeping Time and Order in Distributed Databases](https://dzone.com/articles/tick-or-tock-keeping-time-and-order-in-distributed-1), thanks to [Liu Tang](https://dzone.com/users/3186309/siddontang.html)
+
+Papers:
+
+- 2012, [Consistency Tradeoffs in Modern Distributed Database System Design](http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf)
+- 2020, [Strong and Efficient Consistency with Consistency-Aware Durability ](http://pages.cs.wisc.edu/~ag/cad.pdf), FAST 2020
+
+## Consensus
+
+Technical report:
+
+- University of Cambridge [Distributed consensus revised](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-935.pdf), a great paper about Consenssus especially Paxos and Paxos-Related algorithms, by Heidi Howard
+
+Papers:
+
+- 2014, [Ark: A Real-World Consensus Implementation](https://arxiv.org/pdf/1407.4765.pdf), CoRR
+
 ## SQL & Relation Algebra
 
 Courses:
@@ -121,7 +277,7 @@ Courses:
 
 Blogs:
 
-- [数据库内核杂谈](https://www.infoq.cn/theme/46), thanks to [顾仲贤](https://www.infoq.cn/profile/1780661/publish)
+[] [数据库内核杂谈](https://www.infoq.cn/theme/46), thanks to [顾仲贤](https://www.infoq.cn/profile/1780661/publish)
     - [数据库内核杂谈（七）：数据库优化器（上）](https://www.infoq.cn/article/GhhQlV10HWLFQjTTxRtA)
     - [数据库内核杂谈（八）：数据库优化器（下）](https://www.infoq.cn/article/JCJyMrGDQHl8osMFQ7ZR)
 - [SQL优化器原理 - 查询优化器综述](https://yq.aliyun.com/articles/610128), thanks to [勿烦](https://yq.aliyun.com/users/kyni3qcv656rk?spm=a2c4e.11153940.0.0.6adc1a8etfb0vx)
@@ -254,24 +410,6 @@ Papers:
 - 2013, [Multi-Core, Main-Memory Joins: Sort vs. Hash Revisited](http://www.vldb.org/pvldb/vol7/p85-balkesen.pdf), VLDB
 - 2017, [Looking Ahead Makes Query Plans Robust](http://www.vldb.org/pvldb/vol10/p889-zhu.pdf), VLDB
 
-### Hash Table
-
-Courses:
-
-- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [Hash Tables](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-16-2019)
-
-Blogs:
-
-- [Fibonacci Hashing: The Optimization that the World Forgot (or: a Better Alternative to Integer Modulo)](https://probablydance.com/2018/06/16/fibonacci-hashing-the-optimization-that-the-world-forgot-or-a-better-alternative-to-integer-modulo/), thanks to [Malte Skarupke](https://probablydance.com/)
-- [All hash table sizes you will ever need](https://databasearchitects.blogspot.com/2020/01/all-hash-table-sizes-you-will-ever-need.html), thanks to [Database Architects - Thomas Neumann](https://databasearchitects.blogspot.com/)
-
-### Bloom Filter
-
-Papers:
-- 2018, [SuRF: Practical Range Query Filtering with Fast Succinct Tries](https://www.cs.cmu.edu/~pavlo/papers/mod601-zhangA-hm.pdf), SIGMOD
-
-
 ## DDL
 
 - 2013, [Online, Asynchronous Schema Change in F1](https://research.google.com/pubs/archive/41376.pdf), VLDB
@@ -313,50 +451,6 @@ Blogs:
 
 - [An Overview of SQL Text Functions](https://learnsql.com/blog/), thanks to [Zahin Rahman](https://learnsql.com/authors/zahin-rahman/)
 
-## Transaction
-
-### Isolation Levels
-
-Blogs:
-
-- [一致性模型](https://www.jianshu.com/p/3673e612cce2), thanks to [siddontang](https://www.jianshu.com/u/1yJ3ge)
-
-Papers:
-
-- 1995, [A Critique of ANSI SQL Isolation Levels](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf), SIGMOD
-- 2000, [Generalized Isolation Level Definitions](http://pmg.csail.mit.edu/papers/icde00.pdf), Proceedings of 16th International Conference on Data Engineering
-
-### Concurrency Control
-
-Courses:
-
-- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [Concurrency Control Theory](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-23-2019)
-    - [Two-Phase Locking Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-28-2019)
-    - [Timestamp Ordering Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#oct-30-2019)
-    - [Multi-Version Concurrency Control](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#nov-04-2019)
-
-- CMU [Advanced Database Systems (15-721)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [Multi-Version Concurrency Control (Design Decisions)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-22-2020)
-    - [Multi-Version Concurrency Control (Protocols)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-27-2020)
-    - [Multi-Version Concurrency Control (Garbage Collection)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#jan-29-2020)
-
-Papers:
-
-- 1976, [The Notions of Consistency and Predicate Locks in a Database System](http://jimgray.azurewebsites.net/papers/on%20the%20notions%20of%20consistency%20and%20predicate%20locks%20in%20a%20database%20system%20cacm.pdf), Communications of the ACM
-- 1981, [Concurrency Control in Distributed Database Systems](https://people.eecs.berkeley.edu/~brewer/cs262/concurrency-distributed-databases.pdf), ACM Computing Surveys
-- 1981, [On Optimistic Methods for Concurrency Control](https://www.eecs.harvard.edu/~htk/publication/1981-tods-kung-robinson.pdf), ACM Transactions on Database Systems
-- 1983, [Multiversion Concurrency Control - Theory and Algorithms](https://sites.fas.harvard.edu/~cs265/papers/bernstein-1983.pdf), ACM Transactions on Database Systems
-- 2012, [Serializable Snapshot Isolation in PostgreSQL](http://www.vldb.org/pvldb/vol4/p783-jung.pdf), VLDB
-- 2012, [Calvin: Fast Distributed Transactions for Partitioned Database Systems](http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf), SIGMOD
-- 2014, [MaaT: effective and scalable coordination of distributed transactions in the cloud](http://www.nawab.me/Uploads/MaaT_VLDB2014.pdf), VLDB
-- 2014, [Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores](http://www.vldb.org/pvldb/vol8/p209-yu.pdf), VLDB
-- 2014, [An Evaluation of the Advantages and Disadvantages of Deterministic Database Systems](http://www.vldb.org/pvldb/vol7/p821-ren.pdf), VLDB
-- 2015, [Fast Serializable Multi-Version Concurrency Control for Main-Memory Database Systems](https://db.in.tum.de/~muehlbau/papers/mvcc.pdf), SIGMOD
-- 2017, [An Empirical Evaluation of In-Memory Multi-Version Concurrency Control](http://www.vldb.org/pvldb/vol10/p781-Wu.pdf), VLDB
-- 2017, [An Evaluation of Distributed Concurrency Control](https://www.vldb.org/pvldb/vol10/p553-harding.pdf), VLDB
-- 2019, [Scalable Garbage Collection for In-Memory MVCC Systems](https://db.in.tum.de/~boettcher/p128-boettcher.pdf), VLDB
-
 ## Network
 
 Courses:
@@ -369,79 +463,6 @@ Papers:
 - 2016, [The End of Slow Networks: It's Time for a Redesign](http://www.vldb.org/pvldb/vol9/p528-binnig.pdf), VLDB
 - 2016, [Accelerating Relational Databases by Leveraging Remote Memory and RDMA](https://15721.courses.cs.cmu.edu/spring2020/papers/11-networking/li-sigmod2016.pdf), SIGMOD
 - 2017, [Don't Hold My Data Hostage: A Case for Client Protocol Redesign](http://www.vldb.org/pvldb/vol10/p1022-muehleisen.pdf), VLDB
-
-## Storage
-
-### NoSQL Systems
-
-Papers:
-
-- 2006, [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf), OSDI
-- 2007, [Dynamo: Amazon’s Highly Available Key-value Store](https://sites.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf), SOSP
-- 2008, [PNUTS: Yahoo!’s Hosted Data Serving Platform](https://sites.cs.ucsb.edu/~agrawal/fall2009/PNUTS.pdf), VLDB
-- 2010, [Cassandra - A Decentralized Structured Storage System](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf), SOSP
-- 2019, [PNUTS to Sherpa: Lessons from Yahoo!’s Cloud Database ](http://www.vldb.org/pvldb/vol12/p2300-cooper.pdf), VLDB
-
-### Buffer Management
-
-Courses:
-
-- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [Buffer Pools](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-11-2019)
-
-Papers:
-
-- 1987, [The 5 Minute Rule for Trading Memory for Disc Accesses and the 5 Byte Rule for Trading Memory for CPU Time](https://www.hpl.hp.com/techreports/tandem/TR-86.1.pdf), SIGMOD
-- 2008, [The Five Minute Rule 20 Years Later and How Flash Memory Changes the Rules](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.227.3846&rep=rep1&type=pdf), ACM Queue
-- 2018, [Managing Non-Volatile Memory in Database Systems](https://db.in.tum.de/people/sites/vanrenen/papers/HyMem.pdf?lang=de), SIGMOD
-- 2018, [LeanStore: In-Memory Data Management Beyond Main Memory](https://db.in.tum.de/~leis/papers/leanstore.pdf), ICDE
-- 2020, [Umbra: A Disk-Based System with In-Memory Performance](http://cidrdb.org/cidr2020/papers/p29-neumann-cidr20.pdf), CIDR
-
-### Disk IO
-
-Blogs:
-
-- [On Disk IO, Part 1: Flavors of IO](https://medium.com/databasss/on-disk-io-part-1-flavours-of-io-8e1ace1de017), thanks to [Alex](https://twitter.com/ifesdjeen)
-- [On Disk IO, Part 2: More Flavours of IO](https://medium.com/databasss/on-disk-io-part-2-more-flavours-of-io-c945db3edb13?), thanks to [Alex](https://twitter.com/ifesdjeen)
-- [On Disk IO, Part 3: LSM Trees](https://medium.com/databasss/on-disk-io-part-3-lsm-trees-8b2da218496f), thanks to [Alex](https://twitter.com/ifesdjeen)
-- [On Disk IO, Part 4: B-Trees and RUM Conjecture](https://medium.com/databasss/on-disk-storage-part-4-b-trees-30791060741), thanks to [Alex](https://twitter.com/ifesdjeen)
-- [On Disk IO, Part 5: Access Patterns in LSM Trees](https://medium.com/databasss/on-disk-io-access-patterns-in-lsm-trees-2ba8dffc05f9), thanks to [Alex](https://twitter.com/ifesdjeen)
-- [Ensuring data reaches disk(LWN)](https://lwn.net/Articles/457667/)
-- [Read, write & space amplification - pick 2](http://smalldatum.blogspot.com/2015/11/read-write-space-amplification-pick-2_23.html), thanks to [Mark Callaghan](https://twitter.com/markcallaghandb)
-
-Papers:
-
-- 2016, [Design Tradeoffs of Data Access Methods](http://scholar.harvard.edu/files/stratos/files/rum-tutorial.pdf?m=1461167186), SIGMOD
-- 2016, [Designing Access Methods: The RUM Conjecture](https://stratos.seas.harvard.edu/files/stratos/files/rum.pdf), EDBT
-
-### B-Tree
-
-Blogs:
-
-- [B树、B+树索引算法原理（上）](https://www.codedump.info/post/20200609-btree-1/) thanks to [codedump](https://www.codedump.info/)
-- [B树、B+树索引算法原理（下）](https://www.codedump.info/post/20200615-btree-2/)
-
-Courses:
-
-- CMU [Database Systems (15-445/645)](https://15445.courses.cs.cmu.edu/fall2019/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [Trees Indexes I](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-18-2019)
-    - [Trees Indexes II](https://15445.courses.cs.cmu.edu/fall2019/schedule.html#sep-23-2019)
-
-- CMU [Advanced Database Systems (15-721)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html), thanks to [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
-    - [OLTP Indexes (B+Tree Data Structures)](https://15721.courses.cs.cmu.edu/spring2020/schedule.html#feb-03-2020)
-
-Papers:
-
-- 1979, [The Ubiquitous B-Tree](http://carlosproal.com/ir/papers/p121-comer.pdf)
-
-### LSM-Tree
-
-Papers:
-
-- 1996, [The Log-Structured Merge-Tree (LSM-Tree)](https://www.cs.umb.edu/~poneil/lsmtree.pdf),
-- 2014, [A Comparison of Fractal Trees to Log-Structured Merge (LSM) Trees](http://www.pandademo.com/wp-content/uploads/2017/12/A-Comparison-of-Fractal-Trees-to-Log-Structured-Merge-LSM-Trees.pdf)
-- 2017, [WiscKey: Separating Keys from Values in SSD-conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf), TOS
-- 2019, [LSM-based Storage Techniques: A Survey](https://arxiv.org/pdf/1812.07527.pdf)
 
 ### Learned Indexes Structures
 
@@ -469,27 +490,6 @@ Blogs:
 Papers:
 
 - 2007, [Dynamo: Amazon’s Highly Available Key-value Store](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), SOSP
-
-## Replication & Consistency
-
-Blogs:
-
-- [Tick or Tock? Keeping Time and Order in Distributed Databases](https://dzone.com/articles/tick-or-tock-keeping-time-and-order-in-distributed-1), thanks to [Liu Tang](https://dzone.com/users/3186309/siddontang.html)
-
-Papers:
-
-- 2012, [Consistency Tradeoffs in Modern Distributed Database System Design](http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf)
-- 2020, [Strong and Efficient Consistency with Consistency-Aware Durability ](http://pages.cs.wisc.edu/~ag/cad.pdf), FAST 2020
-
-## Consensus
-
-Technical report:
-
-- University of Cambridge [Distributed consensus revised](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-935.pdf), a great paper about Consenssus especially Paxos and Paxos-Related algorithms, by Heidi Howard
-
-Papers:
-
-- 2014, [Ark: A Real-World Consensus Implementation](https://arxiv.org/pdf/1407.4765.pdf), CoRR
 
 ## Scheduling
 
